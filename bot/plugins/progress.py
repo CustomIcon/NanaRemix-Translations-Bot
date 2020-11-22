@@ -12,7 +12,7 @@ async def progresses(_, message):
         languages = poedit['result']['languages']
         text = '╒═══「 **Languages** 」\n'
         for m in languages:
-            text += f'╞══「 {m["name"]} ({m["code"]})」 \n'
+            text += f'│\n╞══「 {m["name"]} - {m["code"]} 」 \n'
             text += f'│ • __Translations:__ `{m["translations"]}`  __Progress:__ `{m["percentage"]}%`\n'
         text += f'╘══「 **Count {len(languages)}** 」'
         await message.reply(text)
