@@ -14,7 +14,7 @@ async def progresses(_, message):
         for m in languages:
             text += f'│\n╞══「 {m["name"]} - {m["code"]} 」 \n'
             text += f'│ • __Translations:__ `{m["translations"]}`  __Progress:__ `{m["percentage"]}%`\n'
-        text += f'╘══「 **Count {len(languages)}** 」'
+        text += f'│\n╘══「 **Count {len(languages)}** 」'
         await message.reply(text)
     else:
         await message.reply('Something went wrong!')
